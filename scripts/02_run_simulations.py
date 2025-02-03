@@ -1,7 +1,7 @@
 import pandas as pd
 import time
 import os
-from sorting_algorithms import bubble_sort, merge_sort, quick_sort
+from scripts import bubble_sort, merge_sort, quick_sort
 
 OUTPUT_DIR = "outputs/"
 
