@@ -1,7 +1,7 @@
 import pandas as pd
 import time
 import os
-from sorting_algorithms import bubble_sort, merge_sort, quick_sort
+from sorting_algorithms import *
 
 OUTPUT_DIR = "outputs/"
 
@@ -19,8 +19,10 @@ def main():
     results = []
     for file in os.listdir(OUTPUT_DIR):
         if file.endswith(".csv"):
-            dataset_type, size = file[:-4].split("_")
-            size = int(size)
+            parts = file[:-4].split("_")
+            dataset_type = "_".join(parts[:-1])  # Join all but the last part as dataset type
+            size = parts[-1]  # The last part should be the size
+            size = int(size)  # Convert size to integer
             
             for algo_name, algo_func in [("Bubble Sort", bubble_sort), 
                                          ("Merge Sort", merge_sort), 

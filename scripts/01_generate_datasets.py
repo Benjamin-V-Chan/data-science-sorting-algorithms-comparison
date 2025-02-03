@@ -28,6 +28,6 @@ def save_dataset(size, dataset_type):
     df.to_csv(f"{OUTPUT_DIR}{dataset_type}_{size}.csv", index=False)
 
 if __name__ == "__main__":
-    for size in [1000, 5000, 10000, 50000]:
+    for size in [10, 50, 100, 500]:
         for dtype in ["random", "sorted", "reversed", "nearly_sorted"]:
             save_dataset(size, dtype)

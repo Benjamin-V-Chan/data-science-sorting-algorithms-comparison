@@ -68,10 +68,10 @@ where \( S^2 \) represents sample variance. The p-value determines if we reject 
 project-root/
 ├── scripts/
 │   ├── 01_generate_datasets.py
-│   ├── 02_sorting_algorithms.py
 │   ├── 03_run_simulations.py
 │   ├── 04_analyze_results.py
-│   └── 05_visualize_results.py
+│   ├── 05_visualize_results.py
+│   └── sorting_algorithms.py
 ├── outputs/
 │   ├── simulation_results.csv
 │   ├── summary_statistics.csv
@@ -102,21 +102,21 @@ python scripts/01_generate_datasets.py
 Run the sorting algorithms on the generated datasets and record execution times:
 
 ```sh
-python scripts/03_run_simulations.py
+python scripts/02_run_simulations.py
 ```
 
 ### **4. Analyze Results**
 Compute summary statistics of the sorting times:
 
 ```sh
-python scripts/04_analyze_results.py
+python scripts/03_analyze_results.py
 ```
 
 ### **5. Visualize Results**
 Generate visualizations of sorting performance:
 
 ```sh
-python scripts/05_visualize_results.py
+python scripts/04_visualize_results.py
 ```
 
 ---
